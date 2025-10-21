@@ -1,0 +1,21 @@
+<h1><%= title %></h1>
+
+<!-- Tabel -->
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Singkatan</th>
+      <th>Fakultas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% data.forEach(item => { %>
+    <tr>
+      <td><%= item.nama %></td>
+      <td><%= item.singkatan %></td>
+      <td><%= item.fakultas %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
