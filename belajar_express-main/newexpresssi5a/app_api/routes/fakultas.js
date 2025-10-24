@@ -8,6 +8,8 @@ const fakultasController = require("../controllers/fakultasController");
 router.get("/", fakultasController.getAllFakultas);
 router.post("/", fakultasController.createFakultas);
 router.get("/:id", fakultasController.getFakultasById);
+router.get("/:id", fakultasController.deletefakultasById);
+router.get("/:id", fakultasController.updategetFakultasById);
 
 // expor module
 module.exports = router;

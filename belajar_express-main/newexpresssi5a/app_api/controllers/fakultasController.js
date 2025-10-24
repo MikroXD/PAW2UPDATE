@@ -26,7 +26,40 @@ const getFakultasById = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
+const updategetFakultasById = async (req, res) => {
+  try {
+    // GET collection fakultas berdasarkan id
+    const result = await fakultasSchema.findById(req.params.id);
+    if (!result) {
+      res.status(404).json({ message: "Fakultas not found" });
+    } else {
+      if(Reg.body.nama!=null){
+        result.nama=reg.body.nama
+      }
+      if(reg.body.singkatan!=null){
+        result.singkatan=reg.body.singkatan
+      }
+      const updateFakultas=await result.save()
+      res.status(200).json(updateFakultas)
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+const deletefakultasById = async (req, res) => {
+  try {
+    // GET collection fakultas berdasarkan id
+    const result = await fakultasSchema.findById(req.params.id);
+    if (!result) {
+      res.status(404).json({ message: "Fakultas not found" });
+    } else {
+      fakultasSchema.deleteOne();
+      res.status(200).json({message:error.message});
+    }
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 const createFakultas = async (req, res) => {
   // // buat intanst
   // const fakultas = new fakultasSchema({
@@ -40,4 +73,4 @@ const createFakultas = async (req, res) => {
 };
 
 // export
-module.exports = { getAllFakultas, getfakultasById, createFakultas };
+module.exports = { getAllFakultas, getFakultasById, createFakultas, deletefakultasById ,updategetFakultasById};
