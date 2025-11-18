@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-do
 
 const Home = React.lazy(() => import("./components/Home"));
 const FakultasList = React.lazy(() => import("./components/Fakultas/List"));
+const ProdiList = React.lazy(() => import("./components/Prodi/List"));
 
 function App() {
   return (
@@ -27,6 +28,11 @@ function App() {
                   Fakultas
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Prodi">
+                  Prodi
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -36,6 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/fakultas" element={<FakultasList />} />
+          <Route path="/Prodi" element={<ProdiList />} />
         </Routes>
       </Suspense>
     </Router>
