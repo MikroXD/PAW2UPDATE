@@ -1,30 +1,34 @@
 {
-  "name": "belajar_express",
+  "name": "paw2update",
   "version": "1.0.0",
-  "description": "belajar_express",
-  "keywords": [
-    "express"
-  ],
-  "homepage": "https://github.com/axelursia/belajar_express#readme",
-  "bugs": {
-    "url": "https://github.com/axelursia/belajar_express/issues"
+  "description": "Project Express.js untuk mata kuliah Pengembangan Aplikasi Web II",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axelursia/belajar_express.git"
+    "url": "git+https://github.com/MikroXD/PAW2UPDATE.git"
   },
+  "keywords": [],
+  "author": "Axel Theo Winata Ursia",
   "license": "ISC",
-  "author": "axel",
   "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bugs": {
+    "url": "https://github.com/MikroXD/PAW2UPDATE/issues"
+  },
+  "homepage": "https://github.com/MikroXD/PAW2UPDATE#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   },
   "dependencies": {
-    "ejs": "^3.1.10",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "express-ejs-layouts": "^2.5.1",
-    "mongoose": "^8.19.1",
-    "nodemon": "^3.1.10"
+    "http-errors": "^2.0.0",
+    "mongoose": "^8.19.3",
+    "morgan": "^1.10.1"
   }
 }
