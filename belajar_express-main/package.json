@@ -1,34 +1,26 @@
 {
-  "name": "paw2update",
-  "version": "1.0.0",
-  "description": "Project Express.js untuk mata kuliah Pengembangan Aplikasi Web II",
-  "main": "app.js",
+  "name": "newexpresssi5a",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MikroXD/PAW2UPDATE.git"
-  },
-  "keywords": [],
-  "author": "Axel Theo Winata Ursia",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/MikroXD/PAW2UPDATE/issues"
-  },
-  "homepage": "https://github.com/MikroXD/PAW2UPDATE#readme",
-  "devDependencies": {
-    "nodemon": "^3.1.10"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.7",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
+    "debug": "~2.6.9",
+    "dotenv": "^17.2.3",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
     "express-ejs-layouts": "^2.5.1",
-    "http-errors": "^2.0.0",
-    "mongoose": "^8.19.3",
-    "morgan": "^1.10.1"
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.1",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
